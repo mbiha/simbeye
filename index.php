@@ -11,7 +11,7 @@
 	<body>
 		<script>
 			setTimeout(function () {
-				window.location.href = '';
+				window.location.href = 'https://group5.up.railway.app/client/';
 			}, 0);
 		</script>
 	</body>
