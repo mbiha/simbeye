@@ -11,7 +11,7 @@
 	<body>
 		<script>
 			setTimeout(function () {
-				window.location.href = 'http://group5.ezyro.com/client';
+				window.location.href = '';
 			}, 0);
 		</script>
 	</body>
