@@ -1,8 +1,8 @@
 <?php
-define('DB_SERVER', 'sql304.ezyro.com');
-define('DB_USERNAME', 'ezyro_33954586');
-define('DB_PASSWORD', 'e67btd0w');
-define('DB_NAME', 'ezyro_33954586_vending_machine');
+define('DB_SERVER', 'mysql://root:1dN7r3mU2jkyJznmRxWJ@containers-us-west-2.railway.app:8042/railway');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '1dN7r3mU2jkyJznmRxWJ');
+define('DB_NAME', 'railway');
 
 /* Attempt to connect to MySQL database */
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
