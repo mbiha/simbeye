@@ -121,53 +121,53 @@
         <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
 
         <h2 id="customers">Card Sales</h2>
-        <?php
+      //  <?php
         // Include config file
-        require_once "../includes/db.php";
+      //  require_once "../includes/db.php";
 
-        // Attempt select query execution
-        $sql = "SELECT p.id, m.machine_id, m.location, c.card_number, p.price FROM sales AS p INNER JOIN machine AS m ON p.machine_id = m.machine_id INNER JOIN customer AS c on p.customer_id = c.id";
+//         // Attempt select query execution
+//         $sql = "SELECT p.id, m.machine_id, m.location, c.card_number, p.price FROM sales AS p INNER JOIN machine AS m ON p.machine_id = m.machine_id INNER JOIN customer AS c on p.customer_id = c.id";
 
-        if ($result = mysqli_query($link, $sql)) {
-          if (mysqli_num_rows($result) > 0) {
-            echo '<table class="table table-hover" id="sales_table">';
-            echo "<thead>";
-            echo "<tr>";
-            echo "<th>#</th>";
-            echo "<th>Machine ID</th>";
-            echo "<th>Item</th>";
-            echo "<th>Price (Tsh)</th>";
-            echo "<th>Card Number</th>";
-            echo "<th>Location</th>";
-            echo "</tr>";
-            echo "</thead>";
-            echo "<tbody>";
-            while ($row = mysqli_fetch_array($result)) {
-              echo "<tr>";
-              echo "<td>" . $row['id'] . "</td>";
-              echo "<td>" . $row['machine_id'] . "</td>";
-              echo "<td>Tea</td>";                          // TODO: Fix this
-              echo "<td>" . $row['price'] . "</td>";
-              echo "<td>" . $row['card_number'] . "</td>";
-              echo "<td>" . $row['location'] . "</td>";
-              echo "</tr>";
-            }
-            echo "</tbody>";
-            echo "</table>";
-            // Free result set
-            mysqli_free_result($result);
-          } else {
-            echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
-          }
-        } else {
-          echo "Oops! Something went wrong. Please try again later.";
-        }
+//         if ($result = mysqli_query($link, $sql)) {
+//           if (mysqli_num_rows($result) > 0) {
+//             echo '<table class="table table-hover" id="sales_table">';
+//             echo "<thead>";
+//             echo "<tr>";
+//             echo "<th>#</th>";
+//             echo "<th>Machine ID</th>";
+//             echo "<th>Item</th>";
+//             echo "<th>Price (Tsh)</th>";
+//             echo "<th>Card Number</th>";
+//             echo "<th>Location</th>";
+//             echo "</tr>";
+//             echo "</thead>";
+//             echo "<tbody>";
+//             while ($row = mysqli_fetch_array($result)) {
+//               echo "<tr>";
+//               echo "<td>" . $row['id'] . "</td>";
+//               echo "<td>" . $row['machine_id'] . "</td>";
+//               echo "<td>Tea</td>";                          // TODO: Fix this
+//               echo "<td>" . $row['price'] . "</td>";
+//               echo "<td>" . $row['card_number'] . "</td>";
+//               echo "<td>" . $row['location'] . "</td>";
+//               echo "</tr>";
+//             }
+//             echo "</tbody>";
+//             echo "</table>";
+//             // Free result set
+//             mysqli_free_result($result);
+//           } else {
+//             echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+//           }
+//         } else {
+//           echo "Oops! Something went wrong. Please try again later.";
+//         }
 
         
 
-        // Close connection
-        mysqli_close($link);
-        ?>
+//         // Close connection
+//         mysqli_close($link);
+//         ?>
       </main>
     </div>
   </div>
