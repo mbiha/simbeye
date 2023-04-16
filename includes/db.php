@@ -1,5 +1,5 @@
 <?php
-define('DB_SERVER', 'mysql://root:1dN7r3mU2jkyJznmRxWJ@containers-us-west-2.railway.app:8042/railway');
+define('DB_SERVER', 'containers-us-west-2.railway.app');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '1dN7r3mU2jkyJznmRxWJ');
 define('DB_NAME', 'railway');
