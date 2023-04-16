@@ -20,7 +20,7 @@
 
 <body>
   <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Group 01</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Group 05</a>
     <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search" /> -->
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
@@ -126,7 +126,7 @@
         require_once "../includes/db.php";
 
         // Attempt select query execution
-        $sql = "SELECT p.id, m.machine_id, m.location, c.card_number, p.price FROM sales AS p INNER JOIN machine AS m ON p.machine_id = m.machine_id INNER JOIN customer AS c on p.customer_id = c.id COLLATE utf8mb4_general_ci";
+        $sql = "SELECT p.id, m.machine_id, m.location, c.card_number, p.price FROM sales AS p INNER JOIN machine AS m ON p.machine_id = m.machine_id INNER JOIN customer AS c on p.customer_id = c.id";
 
         if ($result = mysqli_query($link, $sql)) {
           if (mysqli_num_rows($result) > 0) {
