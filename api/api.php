@@ -5,13 +5,13 @@ function get_card_balance($card_number) {
 //   // Connect to the database
 //   $conn = mysqli_connect('localhost', 'username', 'password', 'database');
 // Connect to the database
-define('DB_SERVER', 'containers-us-west-2.railway.app');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '1dN7r3mU2jkyJznmRxWJ');
-define('DB_NAME', 'railway');
+// define('DB_SERVER', 'containers-us-west-2.railway.app');
+// define('DB_USERNAME', 'root');
+// define('DB_PASSWORD', '1dN7r3mU2jkyJznmRxWJ');
+// define('DB_NAME', 'railway');
 
 /* Attempt to connect to MySQL database */
-$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
   // Prepare a SQL statement to retrieve the balance
   $stmt = mysqli_prepare($conn, 'SELECT card_amount FROM customers WHERE card_number = ?');
