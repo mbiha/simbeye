@@ -10,15 +10,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['card_number']) && isset
   $machine_id = $_GET['machine_id'];
   $item = $_GET['item'];
 
-  echo $customer_id, $amount, $machine_id,  $item;
 
     if($customer_id != null){
         post_card_sales($machine_id, $item,  $amount, $customer_id);
-        echo "Sale card successful!";
+        echo "success";
     }
     else{
         post_coin_sales($machine_id, $item,  $amount);
-        echo "Sale coin successful!";
+        echo "success";
     }
     
  
