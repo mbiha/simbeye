@@ -1,7 +1,7 @@
 <?php
 
 // Include the API file that contains the get_card_balance() function
-require_once('card_api.php');
+require_once('api.php');
 
 // Define the endpoint
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['card_number'])) {
