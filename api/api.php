@@ -4,7 +4,7 @@
 function get_card_balance($card_number) {
 //   // Connect to the database
 //   $conn = mysqli_connect('localhost', 'username', 'password', 'database');
-Connect to the database
+//Connect to the database
 define('DB_SERVER', 'containers-us-west-2.railway.app:8042');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '1dN7r3mU2jkyJznmRxWJ');
