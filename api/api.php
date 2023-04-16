@@ -85,10 +85,8 @@ define('DB_NAME', 'railway');
   mysqli_stmt_bind_param($stmt, 'ssd', $machine_id, $item,  $amount);
 
   // Execute the statement
-  if (mysqli_stmt_execute($stmt)) {
-    echo "New record created successfully";
-  } else {
-    echo "Error: " . mysqli_error($conn);
+  if (!mysqli_stmt_execute($stmt)) {
+    die("Error: " . mysqli_stmt_error($stmt));
   }
 
   // Close the statement and connection
