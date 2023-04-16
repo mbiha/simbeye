@@ -126,7 +126,7 @@
         require_once "../includes/db.php";
 
         // Attempt select query execution
-        $sql = "SELECT p.id, m.machine_id, m.location, c.card_number, p.price FROM sales AS p INNER JOIN machine AS m ON p.machine_id = m.machine_id INNER JOIN customer AS c on p.customer_id = c.id";
+        $sql = "SELECT p.id, m.machine_id, m.location, c.card_number, p.price FROM sales AS p INNER JOIN machine AS m ON p.machine_id = m.machine_id INNER JOIN customer AS c on p.customer_id = c.id COLLATE utf8mb4_general_ci";
 
         if ($result = mysqli_query($link, $sql)) {
           if (mysqli_num_rows($result) > 0) {
