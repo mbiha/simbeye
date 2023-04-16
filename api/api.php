@@ -11,7 +11,7 @@ define('DB_PASSWORD', '1dN7r3mU2jkyJznmRxWJ');
 define('DB_NAME', 'railway');
 
 /* Attempt to connect to MySQL database */
-$conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
   // Prepare a SQL statement to retrieve the balance
   $stmt = mysqli_prepare($conn, 'SELECT card_amount FROM customers WHERE card_number = ?');
