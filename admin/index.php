@@ -120,13 +120,13 @@
 
         <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
 
-        <h2 id="customers">Sales</h2>
+        <h2 id="customers">Card Sales</h2>
         <?php
         // Include config file
         require_once "../includes/db.php";
 
         // Attempt select query execution
-        $sql = "SELECT p.id, m.machine_id, m.location, c.card_number, p.amount_paid FROM price AS p INNER JOIN machine AS m ON p.machine_id = m.machine_id INNER JOIN customer AS c on p.customer_id = c.id";
+        $sql = "SELECT p.id, m.machine_id, m.location, c.card_number, p.price FROM sales AS p INNER JOIN machine AS m ON p.machine_id = m.machine_id INNER JOIN customer AS c on p.customer_id = c.id";
 
         if ($result = mysqli_query($link, $sql)) {
           if (mysqli_num_rows($result) > 0) {
@@ -147,7 +147,7 @@
               echo "<td>" . $row['id'] . "</td>";
               echo "<td>" . $row['machine_id'] . "</td>";
               echo "<td>Tea</td>";                          // TODO: Fix this
-              echo "<td>" . $row['amount_paid'] . "</td>";
+              echo "<td>" . $row['price'] . "</td>";
               echo "<td>" . $row['card_number'] . "</td>";
               echo "<td>" . $row['location'] . "</td>";
               echo "</tr>";
@@ -162,6 +162,8 @@
         } else {
           echo "Oops! Something went wrong. Please try again later.";
         }
+
+        
 
         // Close connection
         mysqli_close($link);
