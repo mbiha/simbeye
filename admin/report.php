@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
+    <div class="container table-responsive" style="max-height:400px;">
         <h1 class="mt-5">Sales Report</h1>
         <hr>
 
@@ -57,7 +57,7 @@
             }
             $data = rtrim($data, ",");
             $labels = rtrim($labels, ",");
-            echo '<canvas id="sales-chart"></canvas>';
+            echo '<canvas id="sales-chart height="50px"></canvas>';
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>';
             echo '<script>';
             echo 'var ctx = document.getElementById("sales-chart").getContext("2d");';
@@ -82,7 +82,7 @@
             echo '},';
             echo 'options: {';
             echo 'responsive: true,';
-            echo 'maintainAspectRatio: false,';
+            echo 'maintainAspectRatio: true,';
             echo '}';
             echo '});';
             echo '</script>';
