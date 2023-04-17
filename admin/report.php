@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container text-centered">
-        <h1 class="mt-5">Sales by Location</h1>
+        <h1 class="mt-5">Sales Table</h1>
         <hr>
 
         <?php
@@ -21,7 +21,7 @@
         
         if ($result->num_rows > 0) {
             // Generate sales report table
-            echo '<table class="table table-striped table-responsive" style = "height:500px; width:800px;">';
+            echo '<table class="table table-striped table-responsive" style = "height:500px; width:1000px;">';
             echo '<thead>';
             echo '<tr>';
             echo '<th>ID</th>';
@@ -53,7 +53,7 @@
             <div class = "container text-centered">
                 <div class = "row">
                     <div class = "col-6">
-            <h2 class="mt-5">Pie Chart</h1>
+            <h2 class="mt-5">Sales by Location</h1>
             <hr>
             <?php
             // Generate sales report pie chart
