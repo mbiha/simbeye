@@ -114,10 +114,10 @@
             }
             $data = rtrim($data2, ",");
             $labels = rtrim($labels2, ",");
-            echo '<canvas id="sales-chart" height="300px" width="300px"></canvas>';
+            echo '<canvas id="sales-chart2" height="300px" width="300px"></canvas>';
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>';
             echo '<script>';
-            echo 'var ctx = document.getElementById("sales-chart").getContext("2d");';
+            echo 'var ctx = document.getElementById("sales-chart2").getContext("2d");';
             echo 'var myChart = new Chart(ctx, {';
             echo 'type: "pie",';
             echo 'data: {';
