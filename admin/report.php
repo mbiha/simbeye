@@ -48,7 +48,7 @@
             ?>
             </div>
             <div class = "container text-centered">
-            echo <h2 class="mt-5">Pie Chart</h1>
+            <h2 class="mt-5">Pie Chart</h1>
             <hr>
             <?php
             // Generate sales report pie chart
