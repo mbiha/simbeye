@@ -30,7 +30,7 @@
     require_once "../includes/db.php";
 
     // Attempt select query execution
-    $sql = "SELECT id, updated_at, amount_paid FROM payment_item"; // TODO: where clause
+    $sql = "SELECT machine_id, item, price, time FROM sales WHERE customer_id = ?"; // TODO: where clause
     if ($result = mysqli_query($link, $sql)) {
       if (mysqli_num_rows($result) > 0) {
         echo '<table class="table table-hover" id="transactions_table">';
@@ -45,10 +45,10 @@
         echo "<tbody>";
         while ($row = mysqli_fetch_array($result)) {
           echo "<tr>";
-          echo "<td>" . $row['id'] . "</td>";
-          echo "<td>" . $row['updated_at'] . "</td>";
-          echo "<td>Tea</td>";                          // TODO: Fix this
-          echo "<td>" . $row['amount_paid'] . "</td>";
+          echo "<td>" . $row['machine_id'] . "</td>";
+          echo "<td>" . $row['item'] . "</td>";
+          echo "<td>" . $row['price'] . "</td>";                          // TODO: Fix this
+          echo "<td>" . $row['time'] . "</td>";
           echo "</tr>";
         }
         echo "</tbody>";
