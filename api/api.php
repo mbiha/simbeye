@@ -97,7 +97,7 @@ function reduce_card_balance($card_id) {
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
-  $balance = get_card_balance($card_number);
+  $balance = get_card_balance($card_id);
   if($balance>500){
   $balance = $balance - 500;
    // Prepare a SQL statement to insert the data
