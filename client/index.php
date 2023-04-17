@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 </div>
                 </div>
-          <button type="submit" class="btn btn-outline-secondary my-sm-0">History</button>
+          <input type="submit" class="btn btn-primary">History</button>
         </form>
         
       </div>
