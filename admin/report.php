@@ -13,7 +13,7 @@
 
         <?php
         // Include config file
-        require_once "../../includes/db.php";
+        require_once "../includes/db.php";
         
         $sql = "SELECT * FROM sales";
         $result = $conn->query($sql);
