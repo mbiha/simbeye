@@ -19,6 +19,7 @@
   <div class="col-sm-10 col-lg-10 container">
     <div class="card text-center">
       <div class="card-body">
+        <h5 class="card-title">Your Purchases History</h5>
         <?php
 // Include config file
 require_once "../includes/db.php";
