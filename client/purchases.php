@@ -12,7 +12,7 @@
 
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Tea and Coffee Vending Machine</a>
+    <a class="navbar-brand" href="">Tea and Coffee Vending Machine</a>
 <!--     <a class="btn btn-outline-secondary my-sm-0" href="purchases.php">History</a> -->
     
   </nav>
