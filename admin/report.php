@@ -45,10 +45,12 @@
             }
             echo '</tbody>';
             echo '</table>';
+            ?>
             </div>
-                <div class = "container text-centered">
-            <h2 class="mt-5">Pie Chart</h1>
+            echo '<div class = "container text-centered">';
+            echo <h2 class="mt-5">Pie Chart</h1>
             <hr>
+            <?php
             // Generate sales report pie chart
             $data = "";
             $labels = "";
