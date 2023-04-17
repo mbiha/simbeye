@@ -54,7 +54,7 @@
             while ($row = $result->fetch_assoc()) {
                 $data .= $row['total_sales'] . ",";
                 $labels .= '"' . $row['machine_id'] . '",';
-                esco $data;
+                echo $data;
             }
             $data = rtrim($data, ",");
             $labels = rtrim($labels, ",");
