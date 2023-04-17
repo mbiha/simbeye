@@ -78,10 +78,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <form action="purchases.php" method="get">
                 <div class="form-group row">
                   <div class="col-sm-10 col-lg-3 container">
-          <div class="form-group">
-              <label for="card-number">Card Number:</label>
-              <input type="text" class="form-control" id="card-number" name="card_number">
-          </div>
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" class="form-control" id="card-number" name="card_number">
+                <div class="form-group">
+
+                </div>
                 </div>
           <button type="submit" class="btn btn-outline-secondary my-sm-0">History</button>
         </form>
