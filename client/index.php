@@ -56,13 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="#">Tea and Coffee Vending Machine</a>
 <!--     <a class="btn btn-outline-secondary my-sm-0" href="purchases.php">History</a> -->
-    <form action="purchases.php" method="get">
-      <div class="form-group">
-      <label for="card-number">Card Number:</label>
-      <input type="text" class="form-control" id="card-number" name="card_number">
-      </div>
-      <button type="submit" class="btn btn-outline-secondary my-sm-0">History</button>
-    </form>
+    
   </nav>
   <div class="container-fluid">
     <div class="card text-center">
@@ -80,6 +74,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <!-- <a href="purchases.html" class="btn btn-primary">View Balance</a> -->
           <input type="submit" class="btn btn-primary" value="View Balance">
+              <form action="purchases.php" method="get">
+          <div class="form-group">
+          <label for="card-number">Card Number:</label>
+          <input type="text" class="form-control" id="card-number" name="card_number">
+          </div>
+          <button type="submit" class="btn btn-outline-secondary my-sm-0">History</button>
+        </form>
         </form>
       </div>
     </div>
