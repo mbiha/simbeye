@@ -80,14 +80,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <div class="col-sm-10 col-lg-3 container">
                     <label for="card-number">Card Number:</label>
                     <input type="text" class="form-control" id="card-number" name="card_number">
-                </div>
+                  </div>
                 </div>
                 <input type="submit" class="btn btn-primary" value = "View History"></button>
-          
-        </form>
+           </form>
         
       
-        <div class="col-sm-6 mt-5">
     <h3>Recharge Balance</h3>
     <form action="recharge.php" method="POST">
         <div class="form-group row">
@@ -108,6 +106,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </select>
             </div>
         </div>
+      <div class="form-group row">
+            <label for="credit-card" class="col-sm-2 col-form-label">Amount:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="credit-card" name="credit_card" placeholder="Amount" required>
+            </div>
+        </div>
         <div class="form-group row">
             <div class="col-sm-6 text-right">
                 <button type="submit" class="btn btn-primary">Recharge</button>
@@ -117,7 +121,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
     </div>
     <!-- <div class="card-footer text-muted">2 days ago</div> -->
-  </div>
   </div>
   </div>
 </body>
