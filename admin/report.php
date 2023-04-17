@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container text-centered">
+    <div class="container text-center">
         <h1 class="mt-5">Sales Table</h1>
         <hr>
 
@@ -21,7 +21,7 @@
         
         if ($result->num_rows > 0) {
             // Generate sales report table
-            echo '<table class="table table-striped table-responsive" style = "height:500px; width:700px;">';
+            echo '<table class="table table-striped table-responsive col mx-auto" style = "height:500px; width:700px;">';
             echo '<thead>';
             echo '<tr>';
             echo '<th>ID</th>';
