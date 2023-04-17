@@ -101,7 +101,7 @@ function reduce_card_balance($card_id) {
   if($balance>500){
   $balance = $balance - 500;
    // Prepare a SQL statement to insert the data
-  $stmt = mysqli_prepare($conn, 'INSERT INTO customer (card_amount) VALUES (?)  WHERE card_id = $card_id');
+  $stmt = mysqli_prepare($conn, 'INSERT INTO customer (card_amount) VALUES (?)  WHERE card_number = $card_id');
   }
   if (!$stmt) {
     die("Error: " . mysqli_error($conn));
