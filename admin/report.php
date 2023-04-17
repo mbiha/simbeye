@@ -21,7 +21,7 @@
         
         if ($result->num_rows > 0) {
             // Generate sales report table
-            echo '<table class="table table-striped table-responsive" style = "height:500px; width:1000px;">';
+            echo '<table class="table table-striped table-responsive" style = "height:500px; width:700px;">';
             echo '<thead>';
             echo '<tr>';
             echo '<th>ID</th>';
