@@ -67,7 +67,7 @@
             }
             $data = rtrim($data, ",");
             $labels = rtrim($labels, ",");
-            echo '<canvas id="sales-chart" height="100px" weight="100px"></canvas>';
+            echo '<canvas id="sales-chart" height="100px" weight="400px"></canvas>';
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>';
             echo '<script>';
             echo 'var ctx = document.getElementById("sales-chart").getContext("2d");';
@@ -110,11 +110,11 @@
             $result = mysqli_query($link, $sql);
             while ($row = $result->fetch_assoc()) {
                 $data .= $row['total_sales'] . ",";
-                $labels .= '"' . $row['machine_id'] . '",';
+                $labels .= '"' . $row['customer_id'] . '",';
             }
             $data = rtrim($data, ",");
             $labels = rtrim($labels, ",");
-            echo '<canvas id="sales-chart" height="100px" weight="100px"></canvas>';
+            echo '<canvas id="sales-chart" height="100px" weight="400px"></canvas>';
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>';
             echo '<script>';
             echo 'var ctx = document.getElementById("sales-chart").getContext("2d");';
