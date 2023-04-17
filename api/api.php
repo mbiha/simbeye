@@ -62,11 +62,6 @@ function post_card_sales($machine_id, $item, $amount, $customer_id) {
 
 // Define a function to post data to the sales table
 function post_coin_sales($machine_id, $item, $amount) {
-  // Connect to the database
-  define('DB_SERVER', 'containers-us-west-2.railway.app:8042');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '1dN7r3mU2jkyJznmRxWJ');
-define('DB_NAME', 'railway');
   
   /* Attempt to connect to MySQL database */
   $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
