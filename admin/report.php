@@ -47,7 +47,7 @@
             echo '</table>';
             ?>
             </div>
-            echo '<div class = "container text-centered">';
+            <div class = "container text-centered">
             echo <h2 class="mt-5">Pie Chart</h1>
             <hr>
             <?php
