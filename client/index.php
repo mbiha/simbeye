@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
         <div class="form-group row">
-            <div class="col-sm-12 text-right">
+            <div class="col-sm-6 text-right">
                 <button type="submit" class="btn btn-primary">Recharge</button>
             </div>
         </div>
