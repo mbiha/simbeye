@@ -49,7 +49,7 @@
             // Generate sales report pie chart
             $data = "";
             $labels = "";
-            $sql = "SELECT machine_id, SUM(price) AS total_sales FROM sales";
+            $sql = "SELECT machine_id, product_name, SUM(price) AS total_sales FROM sales GROUP BY machine_id, product_name";
             $result = mysqli_query($link, $sql);
             while ($row = $result->fetch_assoc()) {
                 $data .= $row['total_sales'] . ",";
