@@ -50,7 +50,7 @@
             $data = "";
             $labels = "";
             $sql = "SELECT machine_id, SUM(price) AS total_sales FROM sales";
-            $result = $conn->query($sql);
+            $result = mysqli_query($link, $sql);
             while ($row = $result->fetch_assoc()) {
                 $data .= $row['total_sales'] . ",";
                 $labels .= '"' . $row['machine_id'] . '",';
