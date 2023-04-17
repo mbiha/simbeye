@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['card_number']) && isset
     if($customer_id != null){
         post_card_sales($machine_id, $item,  $amount, $customer_id);
         echo "success";
+        reduce_card_balance($customer_id);
     }
     else{
         post_coin_sales($machine_id, $item,  $amount);
