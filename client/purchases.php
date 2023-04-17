@@ -16,7 +16,7 @@
 <!--     <a class="btn btn-outline-secondary my-sm-0" href="purchases.php">History</a> -->
     
   </nav>
-  <div class="container-fluid">
+  <div class="col-sm-10 col-lg-10 container">
     <div class="card text-center">
       <div class="card-body">
         <?php
