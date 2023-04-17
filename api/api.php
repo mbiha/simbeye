@@ -93,24 +93,16 @@ function reduce_card_balance($card_id) {
     die("Connection failed: " . mysqli_connect_error());
   }
   $balance = get_card_balance($card_id);
-  if($balance>500){
-  $balance = $balance - 500;
-   // Prepare a SQL statement to insert the data
-  $stmt = mysqli_prepare($conn, 'INSERT INTO customer (card_amount) VALUES (?)  WHERE card_number = $card_id');
-  }
-  if (!$stmt) {
-    die("Error: " . mysqli_error($conn));
-  }
-
-  // Bind the parameters to the statement
-  mysqli_stmt_bind_param($stmt, 'ssds', $balance);
-
-  // Execute the statement
-  if (!mysqli_stmt_execute($stmt)) {
-    die("Error: " . mysqli_stmt_error($stmt));
-  }
-
+if ($balance > 500) {
+    $balance = $balance - 500;
+    // Prepare a SQL statement to update the data
+    $stmt = mysqli_prepare($conn, 'UPDATE customer SET card_amount = ? WHERE card_number = ?');
+    mysqli_stmt_bind_param($stmt, 'ii', $balance, $card_id);
+    if (!mysqli_stmt_execute($stmt)) {
+      die("Error: " . mysqli_stmt_error($stmt));
+    }
   // Close the statement and connection
   mysqli_stmt_close($stmt);
+}
   mysqli_close($conn);
 }
