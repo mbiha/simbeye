@@ -45,6 +45,9 @@
             }
             echo '</tbody>';
             echo '</table>';
+         } else {
+            echo "No sales data found.";
+         }
             ?>
             </div>
             <div class = "container text-centered">
@@ -93,9 +96,7 @@
             echo '}';
             echo '});';
             echo '</script>';
-            } else {
-            echo "No sales data found.";
-            }
+           
         ?>
         </div>
             <div class = "col-6">
@@ -142,9 +143,7 @@
             echo '}';
             echo '});';
             echo '</script>';
-            } else {
-            echo "No sales data found.";
-            }
+         
         </div>
             mysqli_close($link);
         
