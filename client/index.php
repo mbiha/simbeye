@@ -96,21 +96,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" class="form-control" id="card-number" name="card_number" placeholder="Enter card number" required>
             </div>
         </div>
+        <div class="col-sm-6 mt-5">
+    <h3>Recharge Balance</h3>
+    <form action="recharge.php" method="POST">
         <div class="form-group row">
-            <label for="credit-card" class="col-sm-2 col-form-label">Credit Card:</label>
+            <label for="card-number" class="col-sm-2 col-form-label">Card Number:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="credit-card" name="credit_card" placeholder="Enter credit card number" required>
+                <input type="text" class="form-control" id="card-number" name="card_number" placeholder="Enter card number" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="payment-option" class="col-sm-2 col-form-label">Payment Option:</label>
+            <div class="col-sm-10">
+                <select class="form-control" id="payment-option" name="payment_option" required>
+                    <option value="">Select Payment Option</option>
+                    <option value="mobile_money">Mobile Money</option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="american_express">American Express</option>
+                </select>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-12 text-right">
                 <button type="submit" class="btn btn-primary">Recharge</button>
-            </div>
-        </div>
-      <div class="form-group row">
-            <label for="credit-card" class="col-sm-2 col-form-label">Amount:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="credit-card" name="credit_card" placeholder="Amount" required>
             </div>
         </div>
     </form>
