@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container text-centered">
-        <h1 class="mt-5">Sales Report</h1>
+        <h1 class="mt-5">Sales by Location</h1>
         <hr>
 
         <?php
@@ -100,7 +100,7 @@
         ?>
         </div>
             <div class = "col-6">
-            <h2 class="mt-5">Pie Chart</h1>
+            <h2 class="mt-5">Sales by Payment Method</h1>
             <hr>
             <?php
             // Generate sales report pie chart
