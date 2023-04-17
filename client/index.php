@@ -80,10 +80,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <div class="col-sm-10 col-lg-3 container">
                     <label for="card-number">Card Number:</label>
                     <input type="text" class="form-control" id="card-number" name="card_number">
-                    <input type="submit" class="btn btn-primary" value = "View History"></button>
-                <div class="form-group">
                 </div>
                 </div>
+                <input type="submit" class="btn btn-primary" value = "View History"></button>
           
         </form>
         
