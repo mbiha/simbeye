@@ -1,10 +1,25 @@
 
-<!-- Bootstrap core CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css" />
-// Get card number from GET parameter
+<!DOCTYPE html>
+<html lang="en">
 
-<?php
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tea and Coffee Vending Machine</title>
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Tea and Coffee Vending Machine</a>
+<!--     <a class="btn btn-outline-secondary my-sm-0" href="purchases.php">History</a> -->
+    
+  </nav>
+  <div class="container-fluid">
+    <div class="card text-center">
+      <div class="card-body">
+        <?php
 // Include config file
 require_once "../includes/db.php";
 
@@ -50,3 +65,16 @@ if ($stmt = mysqli_prepare($link, $sql)) {
 mysqli_stmt_close($stmt);
 mysqli_close($link);
 ?>
+        
+         
+        
+      </div>
+    </div>
+    <!-- <div class="card-footer text-muted">2 days ago</div> -->
+  </div>
+  </div>
+</body>
+
+
+
+
