@@ -6,7 +6,7 @@ require_once "../includes/db.php";
 $card_number = $_GET['card_number'];
 
 // Attempt select query execution
-$sql = "SELECT machine_id, item, price, time FROM sales WHERE card_number = ?";
+$sql = "SELECT machine_id, item, price, time FROM sales WHERE customer_id = ?";
 if ($stmt = mysqli_prepare($link, $sql)) {
   mysqli_stmt_bind_param($stmt, "s", $card_number);
   mysqli_stmt_execute($stmt);
