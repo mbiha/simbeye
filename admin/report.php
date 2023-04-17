@@ -21,7 +21,7 @@
         
         if ($result->num_rows > 0) {
             // Generate sales report table
-            echo '<table class="table table-striped table-responsive">';
+            echo '<table class="table table-striped table-responsive"> style = "height:500px; width:800px;"';
             echo '<thead>';
             echo '<tr>';
             echo '<th>ID</th>';
@@ -67,7 +67,7 @@
             }
             $data = rtrim($data, ",");
             $labels = rtrim($labels, ",");
-            echo '<canvas id="sales-chart" height="100px" weight="400px"></canvas>';
+            echo '<canvas id="sales-chart" height="300px" width="300px"></canvas>';
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>';
             echo '<script>';
             echo 'var ctx = document.getElementById("sales-chart").getContext("2d");';
@@ -104,27 +104,27 @@
             <hr>
             <?php
             // Generate sales report pie chart
-            $data = "";
-            $labels = "";
+            $data2 = "";
+            $labels2 = "";
             $sql = "SELECT customer_id, SUM(price) AS total_sales FROM sales GROUP BY customer_id";
             $result = mysqli_query($link, $sql);
             while ($row = $result->fetch_assoc()) {
-                $data .= $row['total_sales'] . ",";
-                $labels .= '"' . $row['customer_id'] . '",';
+                $data2 .= $row['total_sales'] . ",";
+                $labels2 .= '"' . $row['customer_id'] . '",';
             }
-            $data = rtrim($data, ",");
-            $labels = rtrim($labels, ",");
-            echo '<canvas id="sales-chart" height="100px" weight="400px"></canvas>';
+            $data = rtrim($data2, ",");
+            $labels = rtrim($labels2, ",");
+            echo '<canvas id="sales-chart" height="300px" width="300px"></canvas>';
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>';
             echo '<script>';
             echo 'var ctx = document.getElementById("sales-chart").getContext("2d");';
             echo 'var myChart = new Chart(ctx, {';
             echo 'type: "pie",';
             echo 'data: {';
-            echo 'labels: [' . $labels . '],';
+            echo 'labels: [' . $labels2 . '],';
             echo 'datasets: [{';
             echo 'label: "Sales",';
-            echo 'data: [' . $data . '],';
+            echo 'data: [' . $data2 . '],';
             echo 'backgroundColor: [';
             echo '"#FF6384",';
             echo '"#36A2EB",';
