@@ -16,8 +16,9 @@
         require_once "../includes/db.php";
         
         $sql = "SELECT * FROM sales";
-        $result = $conn->query($sql);
-
+        
+        $result = mysqli_query($link, $sql);
+        
         if ($result->num_rows > 0) {
             // Generate sales report table
             echo '<table class="table table-striped">';
