@@ -62,7 +62,7 @@
             }
             $data = rtrim($data, ",");
             $labels = rtrim($labels, ",");
-            echo '<canvas id="sales-chart" height="100px"></canvas>';
+            echo '<canvas id="sales-chart" height="30px"></canvas>';
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>';
             echo '<script>';
             echo 'var ctx = document.getElementById("sales-chart").getContext("2d");';
