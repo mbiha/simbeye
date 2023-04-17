@@ -15,7 +15,7 @@ if ($stmt = mysqli_prepare($link, $sql)) {
     echo '<table class="table table-hover" id="transactions_table">';
     echo "<thead>";
     echo "<tr>";
-    echo "<th>#</th>";
+    echo "<th>Machine ID</th>";
     echo "<th>Date</th>";
     echo "<th>Item</th>";
     echo "<th>Price</th>";
