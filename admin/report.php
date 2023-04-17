@@ -89,7 +89,7 @@
             } else {
             echo "No sales data found.";
             }
-            $conn->close();
+            mysqli_close($link);
             ?>
       </div>
 
