@@ -96,6 +96,7 @@
             } else {
             echo "No sales data found.";
             }
+        ?>
         </div>
             <div class = "col-6">
             <h2 class="mt-5">Pie Chart</h1>
