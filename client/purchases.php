@@ -1,8 +1,13 @@
+
+<!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css" />
+// Get card number from GET parameter
+
 <?php
 // Include config file
 require_once "../includes/db.php";
 
-// Get card number from GET parameter
 $card_number = $_GET['card_number'];
 
 // Attempt select query execution
