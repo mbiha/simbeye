@@ -12,18 +12,9 @@
         <hr>
 
         <?php
-        // Fetch sales data from the database
-        $host = "localhost";
-        $username = "username";
-        $password = "password";
-        $dbname = "sales_db";
-
-        $conn = new mysqli($host, $username, $password, $dbname);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
+        // Include config file
+        require_once "../../includes/db.php";
+        
         $sql = "SELECT * FROM sales";
         $result = $conn->query($sql);
 
@@ -32,17 +23,23 @@
             echo '<table class="table table-striped">';
             echo '<thead>';
             echo '<tr>';
-            echo '<th>Product Name</th>';
-            echo '<th>Quantity Sold</th>';
-            echo '<th>Total Sales</th>';
+            echo '<th>ID</th>';
+            echo '<th>Machine</th>';
+            echo '<th>Item</th>';
+            echo '<th>Price</th>';
+            echo '<th>Card/Coin</th>';
+            echo '<th>Time</th>';
             echo '</tr>';
             echo '</thead>';
             echo '<tbody>';
             while ($row = $result->fetch_assoc()) {
                 echo '<tr>';
-                echo '<td>' . $row['product_name'] . '</td>';
-                echo '<td>' . $row['quantity_sold'] . '</td>';
-                echo '<td>' . $row['total_sales'] . '</td>';
+                echo '<td>' . $row['id'] . '</td>';
+                echo '<td>' . $row['machine_id'] . '</td>';
+                echo '<td>' . $row['item'] . '</td>';
+                echo '<td>' . $row['price'] . '</td>';
+                echo '<td>' . $row['customer_id'] . '</td>';
+                echo '<td>' . $row['time'] . '</td>';
                 echo '</tr>';
             }
             echo '</tbody>';
@@ -51,11 +48,11 @@
             // Generate sales report pie chart
             $data = "";
             $labels = "";
-            $sql = "SELECT product_name, total_sales FROM sales";
+            $sql = "SELECT machine_id, SUM(price) AS total_sales FROM sales";
             $result = $conn->query($sql);
             while ($row = $result->fetch_assoc()) {
                 $data .= $row['total_sales'] . ",";
-                $labels .= '"' . $row['product_name'] . '",';
+                $labels .= '"' . $row['machine_id'] . '",';
             }
             $data = rtrim($data, ",");
             $labels = rtrim($labels, ",");
