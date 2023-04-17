@@ -82,7 +82,7 @@
             echo '},';
             echo 'options: {';
             echo 'responsive: true,';
-            echo 'maintainAspectRatio: false,';
+            echo 'maintainAspectRatio: true,';
             echo '}';
             echo '});';
             echo '</script>';
