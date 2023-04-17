@@ -48,6 +48,8 @@
             ?>
             </div>
             <div class = "container text-centered">
+                <div class = "row">
+                    <div class = "col-6">
             <h2 class="mt-5">Pie Chart</h1>
             <hr>
             <?php
@@ -62,7 +64,7 @@
             }
             $data = rtrim($data, ",");
             $labels = rtrim($labels, ",");
-            echo '<canvas id="sales-chart" height="30px"></canvas>';
+            echo '<canvas id="sales-chart" height="100px" weight="100px"></canvas>';
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>';
             echo '<script>';
             echo 'var ctx = document.getElementById("sales-chart").getContext("2d");';
@@ -86,15 +88,67 @@
             echo '}]';
             echo '},';
             echo 'options: {';
-            echo 'responsive: true,';
-            echo 'maintainAspectRatio: true,';
+            echo 'responsive: false,';
+            echo 'maintainAspectRatio: false,';
             echo '}';
             echo '});';
             echo '</script>';
             } else {
             echo "No sales data found.";
             }
+        </div>
+            <div class = "col-6">
+            <h2 class="mt-5">Pie Chart</h1>
+            <hr>
+            <?php
+            // Generate sales report pie chart
+            $data = "";
+            $labels = "";
+            $sql = "SELECT customer_id, SUM(price) AS total_sales FROM sales GROUP BY customer_id";
+            $result = mysqli_query($link, $sql);
+            while ($row = $result->fetch_assoc()) {
+                $data .= $row['total_sales'] . ",";
+                $labels .= '"' . $row['machine_id'] . '",';
+            }
+            $data = rtrim($data, ",");
+            $labels = rtrim($labels, ",");
+            echo '<canvas id="sales-chart" height="100px" weight="100px"></canvas>';
+            echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>';
+            echo '<script>';
+            echo 'var ctx = document.getElementById("sales-chart").getContext("2d");';
+            echo 'var myChart = new Chart(ctx, {';
+            echo 'type: "pie",';
+            echo 'data: {';
+            echo 'labels: [' . $labels . '],';
+            echo 'datasets: [{';
+            echo 'label: "Sales",';
+            echo 'data: [' . $data . '],';
+            echo 'backgroundColor: [';
+            echo '"#FF6384",';
+            echo '"#36A2EB",';
+            echo '"#FFCE56",';
+            echo '"#5cb85c",';
+            echo '"#5bc0de",';
+            echo '"#f0ad4",';
+            echo '"#d9534f",';
+            echo '"#292b2c"';
+            echo ']';
+            echo '}]';
+            echo '},';
+            echo 'options: {';
+            echo 'responsive: false,';
+            echo 'maintainAspectRatio: false,';
+            echo '}';
+            echo '});';
+            echo '</script>';
+            } else {
+            echo "No sales data found.";
+            }
+        </div>
             mysqli_close($link);
+        
+        </div>
+        </div>
             ?>
       </div>
 
