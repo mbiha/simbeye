@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
         
       </div>
-    <div class="col-sm-12 mt-5">
+    <div class="col-sm-6 mt-5">
     <h3>Recharge Balance</h3>
     <form action="recharge.php" method="POST">
         <div class="form-group row">
@@ -105,6 +105,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group row">
             <div class="col-sm-12 text-right">
                 <button type="submit" class="btn btn-primary">Recharge</button>
+            </div>
+        </div>
+      <div class="form-group row">
+            <label for="credit-card" class="col-sm-2 col-form-label">Amount:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="credit-card" name="credit_card" placeholder="Amount" required>
             </div>
         </div>
     </form>
